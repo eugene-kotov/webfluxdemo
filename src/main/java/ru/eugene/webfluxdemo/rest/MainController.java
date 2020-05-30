@@ -1,10 +1,7 @@
 package ru.eugene.webfluxdemo.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import ru.eugene.webfluxdemo.domain.Message;
@@ -26,7 +23,7 @@ public class MainController {
     }
 
     @PostMapping
-    public Mono<Message> addmessage(Message message) {
+    public Mono<Message> addMessage(@RequestBody Message message) {
         return messageService.addOne(message);
     }
 }
