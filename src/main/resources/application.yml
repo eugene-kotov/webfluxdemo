@@ -1,0 +1,15 @@
+server:
+  port: 8099
+
+spring:
+  r2dbc:
+    url: "r2dbc:postgresql://localhost:5434/test"
+    username: "eugen"
+    password: "lopolop"
+  flyway:
+    url: "jdbc:postgresql://localhost:5434/test"
+    user: "eugen"
+    password: "lopolop"
+    baseline-on-migrate: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
