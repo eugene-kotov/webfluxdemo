@@ -1,6 +1,10 @@
 server:
   port: 8099
 
+jwt:
+  secret: "should be very-very-secret key"
+  expiration: "86400"
+
 spring:
   r2dbc:
     url: "r2dbc:postgresql://localhost:5434/test"
